@@ -4,12 +4,14 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page__body">
   <header class="page-header">
     <a class="logo">
-      <img class="logo__image" src="img/logo-image_mobile.svg" width="34" height="38" alt="Логотип сайта «Кэт энерджи».">
+      <img class="logo__image" src="img/logo-image_mobile.svg" width="34" height="38"
+        alt="Логотип сайта «Кэт энерджи».">
       <img class="logo__text" src="img/logo-text.svg" width="101" height="18" alt="Кэт энерджи.">
     </a>
     <nav class="navigation">
@@ -35,11 +37,13 @@
     <h1 class="visually-hidden">Сайт функционального питания для котов Кэт энерджи</h1>
 
     <section class="promo">
-      <h2 class="promo__title">Функциональное питание для котов</h2>
-      <p class="promo__text">Занялся собой? Займись котом!</p>
-      <a class="button" href="#">Подобрать программу</a>
-      <img class="promo__image" src="https://dummyimage.com/280x270/e6a01e/000000" width="280" height="270"
-        alt="Корм со вкусом курицы.">
+      <div class="promo__wrapper">
+        <h2 class="promo__title">Функциональное питание для котов</h2>
+        <p class="promo__text">Занялся собой? Займись котом!</p>
+        <a class="button" href="#">Подобрать программу</a>
+        <img class="promo__image" src="https://dummyimage.com/280x270/e6a01e/000000" width="280" height="270"
+          alt="Корм со вкусом курицы.">
+      </div>
     </section>
 
     <section class="programs">
@@ -97,19 +101,19 @@
           </ul>
           <p class="results__count">Затраты на питание:<span class="results__food-price">15 000 руб.</span></p>
         </div>
-      </div>
-      <div class="slider-compare">
-        <div class="slider-compare__images">
-          <img src="https://dummyimage.com/280x232/000/38332d" width="280" height="232" alt="Пухлый кот до похудения.">
-        </div>
-        <div class="slider-compare__range">
-          <button class="slider-compare__button" type="button">Было</button>
-          <div class="slider-compare__scale">
-            <button class="slider-compare__toggle" type="button">
-              <span class="visually-hidden">Изменить вес кота</span>
-            </button>
+        <div class="slider-compare">
+          <div class="slider-compare__images">
+            <img src="img/fat-cat.png" width="280" height="232" alt="Пухлый кот до похудения.">
           </div>
-          <button class="slider-compare__button" type="button">Cтало</button>
+          <div class="slider-compare__range">
+            <button class="slider-compare__button" type="button">Было</button>
+            <div class="slider-compare__scale">
+              <button class="slider-compare__toggle" type="button">
+                <span class="visually-hidden">Изменить вес кота</span>
+              </button>
+            </div>
+            <button class="slider-compare__button" type="button">Cтало</button>
+          </div>
         </div>
       </div>
     </section>
