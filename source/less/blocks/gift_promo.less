@@ -1,0 +1,22 @@
+.gift-promo__wrapper {
+  padding: 180px 55px 43px;
+  position: relative;
+  background-color: @color-promo-background;
+}
+
+.gift-promo__wrapper::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 280px;
+  height: 289px;
+  background-image: url("../img/cat-gift.jpg");
+  z-index: -1;
+  content: "-";
+}
+
+.gift-promo__text {
+  font-family: @font-text;
+  .text(16px; 20px);
+  color: @color-white;
+}
