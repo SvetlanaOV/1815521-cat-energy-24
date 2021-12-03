@@ -1,0 +1,38 @@
+.promo__wrapper {
+  position: relative;
+  margin-bottom: 20px;
+  padding-top: 27px;
+  background: linear-gradient(@color-promo-background 50%, #ffffff 50%);
+}
+
+.promo__wrapper::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 320px;
+  height: 302px;
+  background-image: url("../img/cat-promo.jpg");
+  z-index: -1;
+  content: "-";
+}
+
+.promo__title {
+  margin-top: 0;
+  margin-bottom: 25px;
+  .text (36px; 36px);
+  font-weight: @font-normal;
+  color: @color-white;
+  text-transform: uppercase;
+}
+
+.promo__text {
+  margin-top: 0;
+  margin-bottom: 30px;
+  .text (14px; 14px);
+  color: @color-white;
+  text-transform: uppercase;
+}
+
+.promo__button {
+  .text(14px; 18px);
+}
