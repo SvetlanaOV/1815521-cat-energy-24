@@ -1,14 +1,53 @@
+.programs-item::before {
+  content: "";
+  background-color: @color-button;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  border-radius: 50%;
+  left: 20px;
+}
+
+.programs-item {
+  position: relative;
+  padding: 21px 33px 18px 20px;
+}
+
 .programs-item__title {
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 29px;
+  margin-left: 19px;
+  padding-top: 10px;
+  padding-left: 50px;
   .text(24px; 37px);
   font-weight: @font-normal;
   color: @color-heading;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 24px;
+    .text(36px; 36px);
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 40px;
+  }
 }
 
 .programs-item__text {
+  margin-top: 0;
+  margin-bottom: 38px;
   font-family: @font-text;
   .text(14px; 18px);
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 48px;
+    .text(16px; 24px);
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 23px;
+  }
 }
 
 .programs-item__link {
@@ -16,4 +55,8 @@
   color: @color-heading;
   text-transform: uppercase;
   text-decoration: none;
+
+  @media (min-width: @tablet-width) {
+    .text(20px; 30px);
+  }
 }

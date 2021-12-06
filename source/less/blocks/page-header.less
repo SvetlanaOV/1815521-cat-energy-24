@@ -1,0 +1,34 @@
+.page-header {
+  padding: 10px 20px 17px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 110px;
+
+    &::before {
+      position: absolute;
+      width: 720px;
+      height: 694px;
+      right: 0;
+      background-color: @color-promo-background;
+      z-index: -1;
+      content: "";
+    }
+
+    &::after {
+      position: absolute;
+      width: 720px;
+      height: 694px;
+      right: 0;
+      background-image: url("../../img/cat-header.jpg");
+      z-index: -2;
+      content: "";
+    }
+  }
+}
+
