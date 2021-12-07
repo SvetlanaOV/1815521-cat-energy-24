@@ -1,11 +1,36 @@
+.results-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.results-list__item {
+  width: 124px;
+
+  @media (min-width: @tablet-width) {
+    width: 162px;
+    margin-right: 42px;
+  }
+}
+
 .results-list__total {
+  margin: 0;
   .text(24px; 24px);
+  text-align: center;
   color: @color-heading;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    .text(30px; 37px);
+  }
 }
 
 .results-list__text {
   font-family: @font-text;
   .text(12px; 12px);
+  text-align: center;
   color: @color-text;
+
+  @media (min-width: @tablet-width) {
+    .text(14px; 14px);
+  }
 }

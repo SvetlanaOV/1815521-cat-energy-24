@@ -1,28 +1,66 @@
-.promo__wrapper {
+.promo {
+  padding: 0 20px;
   position: relative;
-  margin-bottom: 20px;
-  padding-top: 27px;
-  background: linear-gradient(@color-promo-background 50%, #ffffff 50%);
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 320px;
+    height: 302px;
+    background-image: url("../img/cat-promo.jpg");
+    z-index: -2;
+    content: "";
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-color: @color-promo-background;
+    top: 0;
+    left: 0;
+    width: 320px;
+    height: 302px;
+    z-index: -1;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 0 117px;
+
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 190px;
+  }
 }
 
-.promo__wrapper::after {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 320px;
-  height: 302px;
-  background-image: url("../img/cat-promo.jpg");
-  z-index: -1;
-  content: "-";
+.promo__wrapper {
+  position: relative;
 }
 
 .promo__title {
   margin-top: 0;
   margin-bottom: 25px;
+  padding-top: 27px;
   .text (36px; 36px);
   font-weight: @font-normal;
+  text-align: center;
   color: @color-white;
-  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    width: 420px;
+    margin-bottom: 40px;
+    .text(60px; 60px);
+    color: @color-heading;
+    text-align: start;
+  }
 }
 
 .promo__text {
@@ -30,9 +68,48 @@
   margin-bottom: 30px;
   .text (14px; 14px);
   color: @color-white;
+  text-align: center;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 49px;
+    .text (20px; 20px);
+    color: @color-heading;
+    text-align: start;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 52px;
+  }
+}
+
+.promo__image {
+  margin-bottom: 3px;
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    top: 20px;
+    left: 550px;
+    z-index: -1;
+  }
 }
 
 .promo__button {
+  display: block;
   .text(14px; 18px);
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    display: inline-block;
+    left: -283px;
+    top: -230px;
+    padding: 14px 26px;
+    .text(20px; 20px);
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 0;
+    left: 0;
+    margin-bottom: 160px;
+  }
 }
