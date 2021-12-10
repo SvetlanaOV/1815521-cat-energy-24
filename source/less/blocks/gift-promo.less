@@ -1,8 +1,17 @@
 .gift-promo__wrapper {
-  padding: 180px 55px 43px;
+  padding: 180px 55px 50px;
   position: relative;
   background-color: @color-promo-background;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 180px 55px 50px;
+  }
 }
+
 
 .gift-promo__wrapper::after {
   position: absolute;
@@ -11,12 +20,37 @@
   width: 280px;
   height: 289px;
   background-image: url("../img/cat-gift.jpg");
+  background-size: cover;
   z-index: -1;
-  content: "-";
+  content: "";
+
+  @media (min-width: @tablet-width) {
+    width: 707px;
+    height: 200px;
+    background-image: url("../img/cat-gift-zoom.jpg");
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 0;
+    left: 0;
+    width: 280px;
+    height: 289px;
+    background-image: url("../img/cat-gift.jpg");
+  }
 }
 
 .gift-promo__text {
+  margin: 0;
   font-family: @font-text;
   .text(16px; 20px);
+  text-align: center;
   color: @color-white;
+
+  @media (min-width: @tablet-width) {
+    padding: 70px 125px 70px 425px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+  }
 }
