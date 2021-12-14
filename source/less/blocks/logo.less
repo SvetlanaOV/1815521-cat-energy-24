@@ -1,16 +1,43 @@
+.logo {
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.logo--header {
+  @media (min-width: @tablet-width) {
+    width: 190px;
+  }
+}
+
 .logo__image {
-  padding: 10px 0 17px;
-  margin-right: 56px;
+  padding: 11px 0 16px 20px;
+  margin-right: 54px;
+  vertical-align: bottom;
 
   @media (min-width: @tablet-width) {
     margin-right: 0;
+    padding: 0;
   }
 }
 
 .logo__text {
-  padding: 39px 0 32px;
+  padding: 23px 0 24px;
+  vertical-align: bottom;
 
   @media (min-width: @tablet-width) {
     padding: 0;
+  }
+}
+
+.logo__text--footer {
+  padding: 36px 0 32px;
+
+  @media (min-width: @tablet-width) {
+    padding: 8px 0 0;
   }
 }
