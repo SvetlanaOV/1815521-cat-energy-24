@@ -8,6 +8,10 @@
   @media (min-width: @tablet-width) {
     .text(20px; 26px);
   }
+
+  @media (min-width: @desktop-width) {
+    width: 160px;
+  }
 }
 
 .contacts-content__text {
@@ -21,5 +25,16 @@
     width: 170px;
     .text(16px; 20px; );
     text-align: right;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: left;
+  }
+}
+
+.contacts-content__city {
+  @media (min-width: @tablet-width) {
+    display: block;
+    padding-top: 15px;
   }
 }

@@ -1,0 +1,28 @@
+.page__body--index {
+  @media (min-width: @desktop-width) {
+    &::before {
+      position: absolute;
+      width: 50%;
+      height: 694px;
+      top: 0;
+      right: 0;
+      background-color: @color-promo-background;
+      z-index: -1;
+      content: "";
+    }
+
+    &::after {
+      position: absolute;
+      width: 50%;
+      height: 694px;
+      top: 0;
+      right: 0;
+      background-image: url("../img/cat-header.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: right;
+      z-index: -2;
+      content: "";
+    }
+  }
+}
