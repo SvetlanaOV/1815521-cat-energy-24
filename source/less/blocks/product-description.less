@@ -1,7 +1,11 @@
 .product-description__wrapper {
   display: flex;
   justify-content: space-between;
-  padding: 7px 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 8px 0 7px;
+    border-bottom: 1px solid @color-border-example;
+  }
 }
 
 .product-description__feature,

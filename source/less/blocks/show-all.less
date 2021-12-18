@@ -10,11 +10,33 @@
 }
 
 .show-all__text {
+  position: relative;
   margin-top: 0;
   margin-bottom: 8px;
-  padding-top: 53px;
+  padding-top: 78px;
   .text(16px; 20px);
   text-transform: uppercase;
+
+  &::before {
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    top: 37px;
+    left: 145px;
+    background-color: @color-show-more;
+    content: "";
+  }
+
+  &::after {
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    top: 37px;
+    left: 145px;
+    background-color: @color-show-more;
+    transform: rotate(90deg);
+    content: "";
+  }
 
   @media (min-width: @tablet-width) {
     padding: 161px 60px 0;
@@ -45,7 +67,7 @@
 }
 
 .show-all__button {
-  margin-bottom: 25px;
+  margin-bottom: 24px;
   padding: 10px;
   color: @color-text;
   background-color: @color-content-background;
