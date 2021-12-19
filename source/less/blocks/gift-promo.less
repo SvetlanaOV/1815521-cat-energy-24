@@ -4,11 +4,11 @@
   background-color: @color-promo-background;
 
   @media (min-width: @tablet-width) {
-    padding: 0;
+    padding: 75px 110px 70px 422px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 180px 55px 50px;
+    padding: 186px 35px 24px 30px;
   }
 }
 
@@ -32,7 +32,7 @@
   @media (min-width: @desktop-width) {
     top: 0;
     left: 0;
-    width: 280px;
+    width: 245px;
     height: 289px;
     background-image: url("../img/cat-gift.jpg");
   }
@@ -40,17 +40,18 @@
 
 .gift-promo__text {
   margin: 0;
+  padding: 0;
   font-family: @font-text;
   .text(16px; 20px);
   text-align: center;
   color: @color-white;
 
   @media (min-width: @tablet-width) {
-    padding: 70px 125px 70px 425px;
+    text-align: start;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 0;
+    text-align: center;
   }
 }
 
@@ -64,4 +65,13 @@
   background-repeat: no-repeat;
   z-index: 5;
   content: "";
+
+  @media (min-width: @tablet-width) {
+    left: 79px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 56px;
+    left: 83px;
+  }
 }

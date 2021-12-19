@@ -28,6 +28,12 @@
   }
 }
 
+.navigation__item:last-of-type {
+  @media (max-width: @mobile-width-only) {
+    border-bottom: 1px solid @color-border-menu;
+  }
+}
+
 .navigation__link {
   .text(20px; 20px);
   font-weight: @font-medium;
@@ -62,7 +68,7 @@
 .navigation__toggle {
   position: absolute;
   top: 0;
-  right: 0;
+  left: calc(50% + 95px);
   z-index: 2;
   display: block;
   width: 65px;

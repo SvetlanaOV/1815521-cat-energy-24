@@ -70,10 +70,6 @@
   margin: 0 auto;
   box-sizing: border-box;
 
-  @media (max-width: @mobile-width-only) {
-    border-top: 1px solid @color-border-catalog;
-  }
-
   @media (min-width: @tablet-width) {
     padding: 72px 67px 72px 70px;
     width: @tablet-width;
@@ -94,7 +90,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 61px 0 65px;
+    padding: 92px 0 35px;
   }
 }
 
@@ -106,7 +102,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 65px 0 69px;
+    padding: 63px 0 69px;
   }
 }
 
@@ -114,7 +110,7 @@
   padding: 15px 0 25px;
 
   @media (min-width: @tablet-width) {
-    padding: 22px 0 24px;
+    padding: 20px 0 24px;
   }
 
   @media (min-width: @desktop-width) {
@@ -196,7 +192,7 @@
 
   @media (min-width: @tablet-width) {
     padding: 0 39px;
-    margin-bottom: 55px;
+    margin-bottom: 53px;
     transform: translateY(-65%);
   }
 
@@ -314,7 +310,15 @@
   }
 }
 
-.form__control--radio[type="radio"]:checked + .form__label::after {
+.form__item:hover .form__label--radio::before {
+  border: 1px solid @color-control-hover;
+}
+
+.form__item:active {
+  opacity: 0.3;
+}
+
+.form__control--radio[type="radio"]:checked+.form__label::after {
   position: absolute;
   left: 8px;
   top: 0;
@@ -366,7 +370,11 @@
   }
 }
 
-.form__control--checkbox[type="checkbox"]:checked + .form__label::after {
+.form__item:hover .form__label--checkbox::before {
+  border: 1px solid @color-control-hover;
+}
+
+.form__control--checkbox[type="checkbox"]:checked+.form__label::after {
   position: absolute;
   top: 0;
   left: 1px;
