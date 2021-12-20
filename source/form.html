@@ -11,38 +11,44 @@
 
 <body>
 
-  <header class="page-header wrapper">
-    <a class="logo" href="index.html">
-      <img class="logo__image" src="img/logo-image_mobile.svg" width="34" height="38"
-        alt="Логотип сайта «Кэт энерджи».">
-      <img class="logo__text" src="img/logo-text.svg" width="101" height="18" alt="Кэт энерджи.">
-    </a>
-    <nav class="navigation">
-      <button class="navigation__toggle" type="button">
-        <span class="visually-hidden">Открыть меню</span>
-      </button>
-      <ul class="navigation__list">
-        <li class="navigation__item">
-          <a class="navigation__link" href="index.html">Главная</a>
-        </li>
-        <li class="navigation__item">
-          <a class="navigation__link" href="catalog.html">Каталог продукции</a>
-        </li>
-        <li class="navigation__item navigation__item--active">
-          <a class="navigation__link">Подбор программы</a>
-        </li>
-      </ul>
-    </nav>
+  <header class="page-header">
+    <div class="page-header__wrapper">
+      <div class="wrapper">
+        <a class="logo logo--header" href="index.html">
+          <img class="logo__image" src="img/logo-image_mobile.svg" width="34" height="38"
+            alt="Логотип сайта «Кэт энерджи».">
+          <img class="logo__text" src="img/logo-text.svg" width="101" height="18" alt="Кэт энерджи.">
+        </a>
+      </div>
+      <nav class="navigation navigation--opened navigation--nojs">
+        <button class="navigation__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a class="navigation__link" href="index.html">Главная</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="catalog.html">Каталог продукции</a>
+          </li>
+          <li class="navigation__item navigation__item--active">
+            <a class="navigation__link">Подбор программы</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main class="page-main">
 
-    <header class="page-main__header wrapper">
-      <h1 class="page-main__title">Подбор программы</h1>
-      <p class="page-main__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+    <header class="form-header">
+      <div class="form-header__wrapper wrapper">
+        <h1 class="form-header__title">Подбор программы</h1>
+        <p class="form-header__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+      </div>
     </header>
 
-    <section class="page-form wrapper">
+    <section class="page-form">
       <h2 class="visually-hidden">Форма подбора программы питания</h2>
       <form class="form" action="https://echo.htmlacademy.ru/" method="get">
 
@@ -65,53 +71,86 @@
             </p>
           </fieldset>
 
-          <fieldset class="form__fieldset form__fieldset--program">
-            <legend class="form__legend visually-hidden">Цель программы питания</legend>
-            <ul class="form__list">
-              <li class="form__item">
-                <input class="visually-hidden form__control form__control--radio" type="radio" name="program"
-                  value="slim" id="program-slim">
-                <label class="form__label form__label--radio" for="program-slim">Похудение</label>
-              </li>
-              <li class="form__item">
-                <input class="visually-hidden form__control form__control--radio" type="radio" name="program"
-                  value="fat" id="program-fat">
-                <label class="form__label form__label--radio" for="program-fat">Набор массы</label>
-              </li>
-              <li class="form__item">
-                <input class="visually-hidden form__control form__control--radio" type="radio" name="program"
-                  value="advice" id="program-advice">
-                <label class="form__label form__label--radio" for="program-advice">Не знаю (Нужен ваш совет)</label>
-              </li>
-            </ul>
-          </fieldset>
+          <div class="form__border">
+            <fieldset class="form__fieldset form__fieldset--program">
+              <legend class="form__legend visually-hidden">Цель программы питания</legend>
+              <ul class="form__list">
+                <li class="form__item">
+                  <input class="visually-hidden form__control form__control--radio" type="radio" name="program"
+                    value="slim" id="program-slim" checked>
+                  <label class="form__label form__label--radio" for="program-slim">Похудение</label>
+                </li>
+                <li class="form__item">
+                  <input class="visually-hidden form__control form__control--radio" type="radio" name="program"
+                    value="fat" id="program-fat">
+                  <label class="form__label form__label--radio" for="program-fat">Набор массы</label>
+                </li>
+                <li class="form__item">
+                  <input class="visually-hidden form__control form__control--radio" type="radio" name="program"
+                    value="advice" id="program-advice">
+                  <label class="form__label form__label--radio" for="program-advice">Не знаю (Нужен ваш совет)</label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
         </div>
 
         <fieldset class="form__fieldset form__fieldset--owner">
-          <legend class="form__legend form__legend--owner">Контактные данные (владельца кота)</legend>
-          <div class="form__wrapper">
+          <div class="form__legend-border">
+            <div class="form__legend-wrapper wrapper">
+              <h3 class="form__legend form__legend--owner">Контактные данные (владельца кота)</h3>
+            </div>
+          </div>
+          <div class="form__wrapper form__wrapper--owner wrapper">
             <p class="form__field form__field--owner">
               <label class="form__label form__label--text" for="form-email">E-mail:*</label>
               <input class="form__control form__control--text" placeholder="kuklachev@gmail.com" type="email"
                 name="form-email" id="form-email" required>
+              <svg class="form__image" aria-hidden="true" focusable="false" role="img" fill="none" width="20"
+                height="15" viewBox="0 0 20 15" xmlns="http://www.w3.org/2000/svg">
+                <path stroke="#222" stroke-width="1.3"
+                  d="M1.65 5.848v8M18.65 5.848v8M1 13.198h18M1 1.198h18M18.35 3.03 10 9.524 1.65 3.03V1.498h16.7V3.03Z" />
+              </svg>
             </p>
             <p class="form__field form__field--owner">
               <label class="form__label form__label--text" for="form-phone">Телефон:*</label>
               <input class="form__control form__control--text" placeholder="8 (960) 900-60-90" type="tel"
                 name="form-phone" id="form-phone" required>
+              <svg class="form__image" aria-hidden="true" focusable="false" role="img" width="20" height="21"
+                viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#a)" fill="#000">
+                  <path
+                    d="M17.9 9.753H9.4v1.204h8.5l-2.1 2.107.9.903 3.1-3.11a.754.754 0 0 0 0-.904l-3.1-3.11-.9.903 2.1 2.007ZM8.1 19.787v-6.221a.653.653 0 0 0-.6-.602H3.1a1.226 1.226 0 0 0 1.2 1.204h2.5v5.017H3.1a1.784 1.784 0 0 1-1.728-1.02 1.801 1.801 0 0 1-.172-.686V3.431a1.78 1.78 0 0 1 .483-1.25A1.767 1.767 0 0 1 2.9 1.624h3.9v5.017H4.4a1.218 1.218 0 0 0-1.2 1.204h4.4a.649.649 0 0 0 .6-.602V.923A.863.863 0 0 0 7.5.32H3.1a2.99 2.99 0 0 0-2.151.81A3.01 3.01 0 0 0 0 3.23v13.948a2.91 2.91 0 0 0 .772 2.192 2.89 2.89 0 0 0 2.128.919h4.6a.499.499 0 0 0 .6-.502Z" />
+                </g>
+                <defs>
+                  <clipPath id="a">
+                    <path fill="#fff" transform="translate(0 .32)" d="M0 0h20v20.069H0z" />
+                  </clipPath>
+                </defs>
+              </svg>
             </p>
           </div>
         </fieldset>
 
         <div class="form__fieldset form__fieldset--message">
-          <label class="form__legend form__legend--message" for="message">Комментарий</label>
-          <textarea class="form__control form__control--textarea" rows="6"
-            placeholder="Расскажите обо всех повадках кота" name="message" id="message"></textarea>
+          <div class="form__legend-border">
+            <div class="form__legend-wrapper wrapper">
+              <label class="form__legend form__legend--message" for="message">Комментарий</label>
+            </div>
+          </div>
+          <div class=" form__wrapper form__wrapper--message wrapper">
+            <textarea class="form__control form__control--textarea" placeholder="Расскажите обо всех повадках кота"
+              name="message" id="message"></textarea>
+          </div>
         </div>
 
         <fieldset class="form__fieldset form__fieldset--additional">
-          <legend class="form__legend form__legend--additional">Дополнительно</legend>
-          <ul class="form__list form__list--additional">
+          <div class="form__legend-border">
+            <div class="form__legend-wrapper wrapper">
+              <h3 class="form__legend form__legend--additional">Дополнительно</h3>
+            </div>
+          </div>
+          <ul class="form__list form__list--additional wrapper">
             <li class="form__item form__item--additional">
               <input class="visually-hidden form__control form__control--checkbox" type="checkbox" name="sweetener"
                 id="form-sweetener" checked>
@@ -129,13 +168,13 @@
             </li>
             <li class="form__item form__item--additional">
               <input class="visually-hidden form__control form__control--checkbox" type="checkbox" name="vitamins"
-                id="form-vitamins form__item--additional">
+                id="form-vitamins">
               <label class="form__label form__label--checkbox" for="form-vitamins">Витамины</label>
             </li>
           </ul>
         </fieldset>
 
-        <div class="form__button-wrapper">
+        <div class="form__button-wrapper wrapper">
           <button class="form__button button" type="submit">Отправить заявку</button>
 
           <p class="form__subtitle">* — Обязательные поля</p>
@@ -151,8 +190,9 @@
       <h2 class="visually-hidden">Контакты</h2>
       <div class="wrapper contacts__wrapper">
         <div class="contacts__content contacts__content--inner contacts-content">
-          <p class="contacts-content__heading">Приглашаем к сотрудничеству дилеров!</p>
-          <p class="contacts-content__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+          <p class="contacts-content__heading">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
+          <p class="contacts-content__text">ул. Большая Конюшенная, д. 19/8 <span
+              class="contacts-content__city">Санкт-Петербург</span></p>
         </div>
       </div>
       <div class="contacts__map wrapper">
@@ -161,26 +201,26 @@
     </section>
 
     <div class="page-footer__wrapper wrapper">
-      <a class="logo" href="index.html">
-        <img class="logo__text" src="img/logo-text.svg" width="101" height="18" alt="Кэт энерджи.">
+      <a class="page-footer__logo logo" href="index.html">
+        <img class="logo__text logo__text--footer" src="img/logo-text.svg" width="128" height="24" alt="Кэт энерджи.">
       </a>
 
       <section class="page-footer__social social">
         <h2 class="visually-hidden">Социальные сети</h2>
         <ul class="social__list">
-          <li class="social__item">
+          <li class="social__item social__item--vkontakte">
             <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
               <span class="visually-hidden">Вконтакте</span>
             </a>
           </li>
-          <li class="social__item">
-            <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">
-              <span class="visually-hidden">Фейсбук</span>
-            </a>
-          </li>
-          <li class="social__item">
+          <li class="social__item social__item--instagram">
             <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">
               <span class="visually-hidden">Инстаграм</span>
+            </a>
+          </li>
+          <li class="social__item social__item--facebook">
+            <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">
+              <span class="visually-hidden">Фейсбук</span>
             </a>
           </li>
         </ul>
@@ -188,11 +228,34 @@
       <div class="page-footer__copyright copyright">
         <p class="copyright__text">HTML Academy</p>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <svg aria-hidden="true" focusable="false" role="img" width="27" height="34" viewBox=" 0 0 27 34" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M13.643.016 13.5 0 0 1.407v24.606L13.5 34 27 26.013V1.407L13.643.016Zm11.591 25L13.5 31.956 1.766 25.015V14.93l11.685 6.916.02 1.253-8.017-4.743-.011 1.225 8.046 4.809.02 1.286-8.045-4.758-.01 1.226L13.5 26.95l8.124-4.833V16.91l3.62-2.15-.01 10.256Zm0-11.564-3.22 1.88-1.482.875-7.065-4.187-.011 1.225 6.04 3.573-.053.031-.13.076-.86.492-4.986-2.948-.011 1.225 3.936 2.328-.933.61-.021.012-2.971-1.742-.011 1.225 1.947 1.135-1.988 1.186-11.618-6.872 11.638-6.958 11.8 6.834Zm0-1.225L13.44 5.31 1.766 12.22V2.99L13.5 1.764 25.234 2.99v9.237Z"
+              fill="#666" />
+          </svg>
           <span class="visually-hidden">Сделано в .htmlacademy</span>
         </a>
       </div>
     </div>
   </footer>
+
+  <script>
+    var navMain = document.querySelector('.navigation');
+    var navToggle = document.querySelector('.navigation__toggle');
+
+    navMain.classList.remove('navigation--nojs');
+
+    navToggle.addEventListener('click', function () {
+      if (navMain.classList.contains('navigation--closed')) {
+        navMain.classList.remove('navigation--closed');
+        navMain.classList.add('navigation--opened');
+      } else {
+        navMain.classList.add('navigation--closed');
+        navMain.classList.remove('navigation--opened');
+      }
+    });
+  </script>
 
 </body>
 

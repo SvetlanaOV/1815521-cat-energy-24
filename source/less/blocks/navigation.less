@@ -24,7 +24,13 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding: 10px 0;
+    padding: 10px 0 9px;
+  }
+}
+
+.navigation__item:last-of-type {
+  @media (max-width: @mobile-width-only) {
+    border-bottom: 1px solid @color-border-menu;
   }
 }
 
@@ -62,7 +68,7 @@
 .navigation__toggle {
   position: absolute;
   top: 0;
-  right: 0;
+  left: calc(50% + 95px);
   z-index: 2;
   display: block;
   width: 65px;
@@ -161,7 +167,9 @@
       content: "";
     }
   }
+}
 
+.navigation__item--active-index {
   @media (min-width: @desktop-width) {
     &::after {
       background: @color-white;
