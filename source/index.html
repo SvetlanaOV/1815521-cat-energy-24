@@ -5,6 +5,10 @@
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="img/favicon/favicon-32.png">
+  <link rel="icon" type="image/svg+xml" href="img/favicon/favicon.svg">
+  <link rel="apple-touch-icon" href="img/favicon/apple-icon-180x180.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -14,9 +18,13 @@
     <div class="page-header__wrapper">
       <div class="wrapper">
         <a class="logo logo--header">
-          <img class="logo__image" src="img/logo-image_mobile.svg" width="34" height="38"
-            alt="Логотип сайта «Кэт энерджи».">
-          <img class="logo__text" src="img/logo-text.svg" width="101" height="18" alt="Кэт энерджи.">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+            <img class="logo__image" src="img/logo-image-mobile.svg" width="34" height="38"
+              alt="Логотип сайта «Кэт энерджи».">
+            <img class="logo__text" src="img/logo-text.svg" width="101" height="18" alt="Кэт энерджи.">
+          </picture>
         </a>
       </div>
       <nav class="navigation navigation--opened navigation--nojs">
@@ -46,8 +54,12 @@
       <div class="promo__wrapper wrapper">
         <h2 class="promo__title">Функциональное питание для котов</h2>
         <p class="promo__text">Занялся собой? Займись котом!</p>
-        <img class="promo__image" src="https://dummyimage.com/280x270/e6a01e/000000" width="280" height="270"
-          alt="Корм со вкусом курицы.">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/promo-can-desktop.png 1x, img/promo-can-desktop@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/promo-can-tablet.png 1x, img/promo-can-tablet@2x.png 2x">
+          <img class="promo__image" src="img/promo-can.png" srcset="img/promo-can@2x.png 2x" width="280" height="270"
+            alt="Корм со вкусом курицы.">
+        </picture>
         <a class="promo__button button" href="#">Подобрать программу</a>
       </div>
     </section>
@@ -113,7 +125,16 @@
         </div>
         <div class="slider-compare">
           <div class="slider-compare__images">
-            <img src="img/fat-cat.png" width="280" height="232" alt="Пухлый кот до похудения.">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/cat-fat.png 1x, img/cat-fat@2x.png 2x">
+              <img class="slider-compare__fat-image" src="img/cat-fat-mobile.png" srcset="img/cat-fat-mobile@2x.png 2x" width="280" height="232"
+                alt="Пухлый кот до похудения.">
+            </picture>
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/cat-skinny-tablet.png 1x, img/cat-skinny-tablet@2x.png 2x">
+              <img class="slider-compare__skinny-image" src="img/cat-skinny-mobile.png" srcset="img/cat-skinny-mobile@2x.png 2x" width="243" height="232"
+              alt="Худой кот послепохудения.">
+            </picture>
           </div>
           <div class="slider-compare__range">
             <button class="slider-compare__button" type="button">Было</button>

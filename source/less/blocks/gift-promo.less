@@ -23,10 +23,18 @@
   z-index: -1;
   content: "";
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/cat-gift@2x.jpg");
+  }
+
   @media (min-width: @tablet-width) {
     width: 707px;
     height: 200px;
     background-image: url("../img/cat-gift-zoom.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/cat-gift-zoom@2x.jpg");
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -36,6 +44,10 @@
     height: 289px;
     background-image: url("../img/cat-gift.jpg");
     background-position: right;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/cat-gift@2x.jpg");
+    }
   }
 }
 
