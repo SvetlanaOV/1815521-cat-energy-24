@@ -18,12 +18,19 @@
 
 .logo__image {
   padding: 11px 0 16px 20px;
-  margin-right: 54px;
+  margin-right: 52px;
   vertical-align: bottom;
 
   @media (min-width: @tablet-width) {
     margin-right: 0;
     padding: 0;
+    width: 174px;
+    height: 52px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 202px;
+    height: 59px;
   }
 }
 
@@ -32,6 +39,7 @@
   vertical-align: bottom;
 
   @media (min-width: @tablet-width) {
+    display: none;
     padding: 0;
   }
 }
@@ -40,6 +48,7 @@
   padding: 36px 0 32px;
 
   @media (min-width: @tablet-width) {
+    display: block;
     padding: 8px 0 0;
   }
 }
