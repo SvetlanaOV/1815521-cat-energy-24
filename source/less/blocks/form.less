@@ -235,7 +235,7 @@
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 221px 221px;
-    gap: 40px 122px;
+    gap: 42px 122px;
     padding: 0 70px 10px;
   }
 
@@ -415,6 +415,14 @@
   padding: 13px 11px;
   border: 1px solid @color-border;
 
+  &:hover {
+    border: 1px solid @color-border-example;
+  }
+
+  &:focus {
+    border: 2px solid @color-text;
+  }
+
   @media (min-width: @tablet-width) {
     padding: 11px 18px 12px;
   }
@@ -441,6 +449,22 @@
   }
 }
 
+.form__image--email {
+  stroke: @color-text-product;
+}
+
+.form__control--text:focus + .form__image--email {
+  stroke: @color-button;
+}
+
+.form__image--phone {
+  fill: @color-heading;
+}
+
+.form__control--text:focus + .form__image--phone {
+  fill: @color-button;
+}
+
 .form__control--textarea {
   width: 100%;
   min-height: 150px;
@@ -465,7 +489,7 @@
     display: grid;
     grid-template-columns: 282px 180px;
     column-gap: 61px;
-    padding: 0 70px 72px;
+    padding: 0 70px 73px;
   }
 
   @media (min-width: @desktop-width) {
@@ -503,4 +527,16 @@
   @media (min-width: @desktop-width) {
     margin: 17px 0;
   }
+}
+
+.error {
+  border: 2px solid @color-error;
+}
+
+.error + .form__image--phone {
+  fill: @color-error;
+}
+
+.error + .form__image--email {
+  stroke: @color-error;
 }
