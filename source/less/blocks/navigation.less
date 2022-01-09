@@ -173,10 +173,18 @@
   }
 }
 
-.navigation__item--active-index {
+.navigation__item--index {
+  position: relative;
+
   @media (min-width: @desktop-width) {
     &::after {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      height: 2px;
       background: @color-white;
+      content: "";
     }
   }
 }

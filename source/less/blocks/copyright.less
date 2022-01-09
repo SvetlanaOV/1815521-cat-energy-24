@@ -2,4 +2,23 @@
   margin: 0;
   font-family: @font-text;
   .text(16px; 19px);
+  color: @color-text;
+  text-decoration: none;
+}
+
+.copyright__text:active {
+  opacity: 0.3;
+}
+
+.copyright__image {
+  fill: @color-icon;
+}
+
+.copyright__link:hover .copyright__image {
+  fill: @color-button;
+}
+
+.copyright__link:active .copyright__image {
+  fill: @color-button;
+  opacity: 0.3;
 }
