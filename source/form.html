@@ -10,7 +10,7 @@
   <link rel="icon" type="image/svg+xml" href="img/favicon/favicon.svg">
   <link rel="apple-touch-icon" href="img/favicon/apple-icon-180x180.png">
   <link rel="manifest" href="manifest.webmanifest">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
@@ -20,12 +20,12 @@
       <div class="wrapper">
         <a class="logo logo--header" href="index.html">
           <picture>
-            <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
-            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-            <img class="logo__image" src="img/logo-image-mobile.svg" width="34" height="38"
+            <source media="(min-width: 1440px)" srcset="img/icon/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/icon/logo-tablet.svg">
+            <img class="logo__image" src="img/icon/logo-image-mobile.svg" width="34" height="38"
               alt="Логотип сайта «Кэт энерджи».">
           </picture>
-          <img class="logo__text" src="img/logo-text.svg" width="101" height="18" alt="Кэт энерджи.">
+          <img class="logo__text" src="img/icon/logo-text.svg" width="101" height="18" alt="Кэт энерджи.">
         </a>
       </div>
       <nav class="navigation navigation--opened navigation--nojs">
@@ -115,7 +115,7 @@
               <input class="form__control form__control--text" placeholder="kuklachev@gmail.com" type="email"
                 name="form-email" id="form-email" required>
               <svg class="form__image form__image--email" aria-hidden="true" focusable="false" role="img" fill="none"
-                width="20" height="15">
+                width="20" height="15" viewBox="0 0 20 15">
                 <use xlink:href="img/sprite.svg#icon-email"></use>
               </svg>
             </p>
@@ -124,7 +124,7 @@
               <input class="form__control form__control--text" placeholder="8 (960) 900-60-90" type="tel"
                 name="form-phone" id="form-phone" required>
               <svg class="form__image form__image--phone" aria-hidden="true" focusable="false" role="img" width="20"
-                height="21" fill="none">
+                height="21" viewBox="0 0 20 21" fill="none">
                 <use xlink:href="img/sprite.svg#icon-phone"></use>
               </svg>
             </p>
@@ -196,6 +196,9 @@
       </div>
       <div class="contacts__map wrapper">
         <picture>
+          <source type="image/webp" media="(min-width: 1440px)" srcset="img/map-desktop.webp 1x, img/map-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet.webp 1x, img/map-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/map-mobile.webp 1x, img/map-mobile@2x.webp 2x">
           <source media="(min-width: 1440px)" srcset="img/map-desktop.png 1x, img/map-desktop@2x.png 2x">
           <source media="(min-width: 768px)" srcset="img/map-tablet.png 1x, img/map-tablet@2x.png 2x">
           <img class="contacts__map-image" src="img/map-mobile.png" srcset="img/map-mobile@2x.png 2x" width="320"
@@ -205,7 +208,7 @@
     </section>
     <div class="page-footer__wrapper wrapper">
       <a class="page-footer__logo logo" href="index.html">
-        <img class="logo__text logo__text--footer" src="img/logo-text.svg" width="128" height="24" alt="Кэт энерджи.">
+        <img class="logo__text logo__text--footer" src="img/icon/logo-text.svg" width="128" height="24" alt="Кэт энерджи.">
       </a>
       <section class="page-footer__social social">
         <h2 class="visually-hidden">Социальные сети</h2>
@@ -213,7 +216,7 @@
           <li class="social__item social__item--vkontakte">
             <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
               <svg class="social__image social__image--vkontakte" aria-hidden="true" focusable="false" role="img"
-                width="23" height="16" fill="none">
+                width="23" height="16" viewBox="0 0 23 16" fill="none">
                 <use xlink:href="img/sprite.svg#icon-vkontakte"></use>
               </svg>
               <span class="visually-hidden">Вконтакте</span>
@@ -222,7 +225,7 @@
           <li class="social__item social__item--instagram">
             <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">
               <svg class="social__image social__image--instagram" aria-hidden="true" focusable="false" role="img"
-                width="16" height="16" fill="none">
+                width="16" height="16" viewBox="0 0 16 16" fill="none">
                 <use xlink:href="img/sprite.svg#icon-instagram"></use>
               </svg>
               <span class="visually-hidden">Инстаграм</span>
@@ -231,7 +234,7 @@
           <li class="social__item social__item--facebook">
             <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">
               <svg class="social__image social__image--facebook" aria-hidden="true" focusable="false" role="img"
-                width="13" height="20" fill="none">
+                width="13" height="20" viewBox="0 0 13 20" fill="none">
                 <use xlink:href="img/sprite.svg#icon-facebook"></use>
               </svg>
               <span class="visually-hidden">Фейсбук</span>
@@ -245,7 +248,7 @@
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
           <svg class="copyright__image" aria-hidden="true" focusable="false" role="img" width="27" height="34"
             viewBox="0 0 27 34" fill="none">
-            <use xlink:href="img/sprite.svg#icon-academy"></use>
+            <use xlink:href="img/sprite.svg#html-academy"></use>
           </svg>
           <span class="visually-hidden">Сделано в .htmlacademy</span>
         </a>
@@ -253,22 +256,7 @@
     </div>
   </footer>
 
-  <script>
-    var navMain = document.querySelector('.navigation');
-    var navToggle = document.querySelector('.navigation__toggle');
-
-    navMain.classList.remove('navigation--nojs');
-
-    navToggle.addEventListener('click', function () {
-      if (navMain.classList.contains('navigation--closed')) {
-        navMain.classList.remove('navigation--closed');
-        navMain.classList.add('navigation--opened');
-      } else {
-        navMain.classList.add('navigation--closed');
-        navMain.classList.remove('navigation--opened');
-      }
-    });
-  </script>
+  <script src="js/script.js"></script>
 
 </body>
 
