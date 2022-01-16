@@ -261,7 +261,7 @@
 }
 
 .form__label {
-  margin-right: 14px;
+  margin-right: 11px;
   text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
@@ -412,8 +412,10 @@
 
 .form__control--text {
   flex-grow: 1;
-  padding: 13px 11px;
+  height: 44px;
+  padding: 0 11px;
   border: 1px solid @color-border;
+  line-height: 18px;
 
   &:hover {
     border: 1px solid @color-border-example;
@@ -425,11 +427,13 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding: 11px 18px 12px;
+    height: 53px;
+    padding: 0 18px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 10px 17px;
+    height: 51px;
+    padding: 0 17px;
   }
 }
 
