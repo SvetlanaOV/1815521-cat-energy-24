@@ -310,6 +310,10 @@
   border: 1px solid @color-control-hover;
 }
 
+.form__item:focus-within .form__label--radio::before {
+  border: 1px solid @color-control-hover;
+}
+
 .form__item:active {
   opacity: 0.3;
 }
@@ -372,6 +376,10 @@
 }
 
 .form__item:hover .form__label--checkbox::before {
+  border: 1px solid @color-control-hover;
+}
+
+.form__item:focus-within .form__label--checkbox::before {
   border: 1px solid @color-control-hover;
 }
 
@@ -438,7 +446,7 @@
 }
 
 .form__field--owner .form__control--text {
-  padding-right: 30px;
+  padding-right: 45px;
 }
 
 .form__image {
@@ -534,14 +542,18 @@
   }
 }
 
-.error {
+.form__control--error {
   border: 2px solid @color-error;
 }
 
-.error + .form__image--phone {
+.form__control--error + .form__image--phone {
   fill: @color-error;
 }
 
-.error + .form__image--email {
+.form__control--error + .form__image--email {
   stroke: @color-error;
+}
+
+.form__control:disabled + .form__label {
+  opacity: 0.3;
 }

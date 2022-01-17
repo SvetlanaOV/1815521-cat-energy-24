@@ -30,7 +30,7 @@
           <img class="logo__text" src="img/icon/logo-text.svg" width="101" height="18" alt="Кэт энерджи.">
         </a>
       </div>
-      <nav class="navigation navigation--opened navigation--nojs">
+      <nav class="navigation navigation--closed navigation--nojs">
         <button class="navigation__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
@@ -69,11 +69,13 @@
               <label class="form__label form__label--text" for="cat-name">Имя:*</label>
               <input class="form__control form__control--text" placeholder="БАРСИК" type="text" name="cate-name"
                 id="cat-name" required>
+                <!-- Для стилизации ошибки используется модификатор form__control--error-->
             </p>
             <p class="form__field">
               <label class="form__label form__label--text" for="cat-weight">Вес (кг):*</label>
               <input class="form__control form__control--text" placeholder="7" type="text" name="cate-weight"
                 id="cat-weight" required>
+                <!-- Для стилизации ошибки используется модификатор form__control--error-->
             </p>
             <p class="form__field">
               <label class="form__label form__label--text" for="cat-age">Возраст (лет):</label>
@@ -116,6 +118,7 @@
               <label class="form__label form__label--text" for="form-email">E-mail:*</label>
               <input class="form__control form__control--text" placeholder="kuklachev@gmail.com" type="email"
                 name="form-email" id="form-email" required>
+                <!-- Для стилизации ошибки используется модификатор form__control--error-->
               <svg class="form__image form__image--email" aria-hidden="true" focusable="false" role="img" fill="none"
                 width="20" height="15" viewBox="0 0 20 15">
                 <use xlink:href="img/sprite.svg#icon-email"></use>
@@ -125,6 +128,7 @@
               <label class="form__label form__label--text" for="form-phone">Телефон:*</label>
               <input class="form__control form__control--text" placeholder="8 (960) 900-60-90" type="tel"
                 name="form-phone" id="form-phone" required>
+                  <!-- Для стилизации ошибки используется модификатор form__control--error-->
               <svg class="form__image form__image--phone" aria-hidden="true" focusable="false" role="img" width="20"
                 height="21" viewBox="0 0 20 21" fill="none">
                 <use xlink:href="img/sprite.svg#icon-phone"></use>

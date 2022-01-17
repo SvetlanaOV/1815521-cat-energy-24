@@ -1,4 +1,4 @@
-.gift-promo__wrapper {
+.gift-promo {
   padding: 190px 55px 40px;
   position: relative;
   background-color: @color-promo-background;
@@ -12,12 +12,12 @@
   }
 }
 
-.gift-promo__wrapper::after {
+.gift-promo::after {
   position: absolute;
   top: 0;
   left: 0;
   width: 280px;
-  height: 289px;
+  height: 100%;
   background-image: url("../img/cat-gift.jpg");
   background-size: cover;
   z-index: -1;
@@ -29,7 +29,7 @@
 
   @media (min-width: @tablet-width) {
     width: 707px;
-    height: 200px;
+    height: 100%;
     background-image: url("../img/cat-gift-zoom.jpg");
 
     @media (min-resolution: 2dppx) {
@@ -41,9 +41,10 @@
     top: 0;
     left: 0;
     width: 245px;
-    height: 289px;
+    height: 100%;
     background-image: url("../img/cat-gift.jpg");
     background-position: right;
+    background-size: cover;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/cat-gift@2x.jpg");
@@ -68,7 +69,7 @@
   }
 }
 
-.gift-promo__wrapper::before {
+.gift-promo::before {
   position: absolute;
   top: 60px;
   left: 101px;
