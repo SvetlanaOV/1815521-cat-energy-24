@@ -5,6 +5,7 @@
   background: @color-white;
 
   @media (min-width: @tablet-width) {
+    flex-direction: unset;
     padding-top: 78px;
   }
 
@@ -19,6 +20,9 @@
   }
 
   @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     padding: 48px 36px 0;
     border: 2px solid @color-content-background;
   }
